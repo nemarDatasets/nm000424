@@ -1,0 +1,90 @@
+{
+  "version": "2.0",
+  "pipeline_stage": "validated",
+  "authors": {
+    "Johanna Petra Szabo": {
+      "orcid": "0000-0001-7690-9171"
+    },
+    "Panna Hegedüs": {},
+    "Tamás Laszlovszky": {},
+    "László Halász": {},
+    "Gabriella Miklós": {},
+    "Bálint Király": {},
+    "György Perczel": {},
+    "Virág Bokodi": {},
+    "László Entz": {},
+    "István Ulbert": {},
+    "Gertrúd Tamás": {},
+    "Dániel Fabó": {},
+    "Loránd Erőss": {},
+    "Balázs Hangya": {
+      "orcid": "0000-0003-2709-7407"
+    }
+  },
+  "related_identifiers": [
+    {
+      "identifier": "10.6084/m9.figshare.31359616",
+      "identifier_type": "DOI",
+      "relation_type": "IsDerivedFrom"
+    },
+    {
+      "identifier": "https://github.com/nemarDatasets/nm000424",
+      "identifier_type": "URL",
+      "relation_type": "IsDescribedBy"
+    },
+    {
+      "identifier": "https://nemar.org/dataset/nm000424",
+      "identifier_type": "URL",
+      "relation_type": "IsDescribedBy"
+    }
+  ],
+  "title": "Human subthalamic nucleus LFP during a stop-signal task (STN delta; Szabo et al.; derivative, 250 Hz)",
+  "license": "CC-BY-4.0",
+  "dataset_type": "derivative",
+  "resource_type_general": "Dataset",
+  "modalities": [
+    "ieeg"
+  ],
+  "resource_type_specific": "iEEG Dataset",
+  "sizes": [
+    "78.15 MB (48 files)"
+  ],
+  "formats": [
+    ".eeg",
+    ".json",
+    ".py",
+    ".tsv",
+    ".vhdr",
+    ".vmrk"
+  ],
+  "description": "Intraoperative local field potentials recorded with microelectrodes from the subthalamic nucleus of 13 patients with Parkinson's disease undergoing deep brain stimulation surgery while performing a stop-signal reaction time task. This derivative release provides the authors' continuous LFP, filtered and downsampled to 250 Hz (0.5 Hz high-pass version), repackaged in BIDS-iEEG format with events annotations. It supports analysis of delta-frequency processes in the human STN during action cancellation.",
+  "methods_description": "Intraoperative STN microelectrode LFP recorded during DBS surgery while patients performed a stop-signal task. Original EEGLAB files at 250 Hz (high-pass 0.5 or 2 Hz, notch-filtered or cleaned) were converted to BrainVision float32 µV with unchanged values, and EEGLAB annotations were written to events.tsv.",
+  "keywords": [
+    {
+      "term": "subthalamic nucleus"
+    },
+    {
+      "term": "local field potential"
+    },
+    {
+      "term": "stop-signal task"
+    },
+    {
+      "term": "response inhibition"
+    },
+    {
+      "term": "Parkinson Disease",
+      "subject_scheme": "MeSH",
+      "value_uri": "http://id.nlm.nih.gov/mesh/D010300"
+    },
+    {
+      "term": "Deep Brain Stimulation",
+      "subject_scheme": "MeSH",
+      "value_uri": "http://id.nlm.nih.gov/mesh/D046690"
+    },
+    {
+      "term": "intracranial EEG"
+    }
+  ],
+  "source_hash": "c1799e287cc735049453375d8636b1ac1d07b966fd197b1005d5a9f41dac4e21"
+}
