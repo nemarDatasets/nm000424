@@ -1,0 +1,27 @@
+# Human STN LFP during a stop-signal task (STN delta) - DERIVATIVE
+
+Intraoperative local field potentials from the subthalamic nucleus (STN) of patients with Parkinson's disease
+undergoing DBS surgery, recorded with microelectrodes while they performed a stop-signal reaction time task.
+
+THIS IS A DERIVATIVE DATASET. The release provides the continuous STN LFP only as the authors' filtered 250 Hz EEGLAB
+files. Each recording exists in a 0.5 Hz and a 2 Hz high-pass version; only the 0.5 Hz version is included here.
+
+## Source
+- Figshare: Johanna Petra Szabo, Panna Hegedüs, Tamás Laszlovszky, László Halász, Gabriella Miklós, Bálint Király, György Perczel, Virág Bokodi, László Entz, István Ulbert, Gertrúd Tamás, Dániel Fabó, Loránd Erőss, Balázs Hangya. "Dataset for "Neurons of the human subthalamic nucleus engage with local delta frequency processes during action cancellation"". doi:10.6084/m9.figshare.31359616 (CC BY 4.0).
+  Both Figshare files matched their MD5 checksums.
+- The original release (human-STN-delta_data.zip, 8.5 GB) also contains single-/multi-unit waveforms and spike times
+  (MClust/CellBase), behavioural trial files, scalp EEG (intraoperative and postoperative) and epoched/CSD files. They are
+  not repackaged here: BIDS-iEEG has no spike format, scalp EEG is not intracranial, and the epoched files duplicate the
+  continuous data. Get them from the Figshare record. The release's session folder names are surgery dates, so they
+  are not copied.
+
+## Contents
+- 13 patients (`sub-pd<NN>` = release patient id), 24 recordings, 5.13 h at 250 Hz.
+- `ses-intraop<k>`: intraoperative session k of that patient (ordered by date; dates removed).
+- `acq-<side>stim<off|on>`: hemisphere and the release's stimulation label (folder `stim<off|on>_<side>_LFP`).
+- Channels Ch1..Ch5: the release's microelectrode tracks (type DBS, µV, values unchanged as float32).
+- `events.tsv`: the EEGLAB annotations (StimulusOn, KeyPress1, Feedback, StopSignal, ...).
+- No coordinates are released; electrodes.tsv lists the tracks with x, y, z = n/a and the stated target (STN).
+
+## Privacy
+Recording dates (in the release folder names) are dropped. No names were found.

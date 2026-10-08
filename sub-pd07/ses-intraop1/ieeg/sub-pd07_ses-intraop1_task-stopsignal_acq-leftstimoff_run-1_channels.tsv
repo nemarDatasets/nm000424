@@ -1,0 +1,4 @@
+name	type	units	low_cutoff	high_cutoff	sampling_frequency	group	status	status_description	description
+Ch1	DBS	µV	0.5	n/a	250.0	left	good	n/a	intraoperative STN microelectrode LFP, track Ch1 of the left hemisphere (release channel name)
+Ch2	DBS	µV	0.5	n/a	250.0	left	good	n/a	intraoperative STN microelectrode LFP, track Ch2 of the left hemisphere (release channel name)
+Ch3	DBS	µV	0.5	n/a	250.0	left	good	n/a	intraoperative STN microelectrode LFP, track Ch3 of the left hemisphere (release channel name)

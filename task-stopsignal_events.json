@@ -1,0 +1,8 @@
+{
+  "trial_type": {
+    "Description": "EEGLAB event type of the release (e.g. StimulusOn, KeyPress1, Feedback, StopSignal)"
+  },
+  "sample": {
+    "Description": "onset x 250 (0-based)"
+  }
+}

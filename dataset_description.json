@@ -1,0 +1,51 @@
+{
+  "Name": "Human subthalamic nucleus LFP during a stop-signal task (STN delta; Szabo et al.; derivative, 250 Hz)",
+  "BIDSVersion": "1.10.0",
+  "DatasetType": "derivative",
+  "License": "CC-BY-4.0",
+  "Authors": [
+    "Johanna Petra Szabo",
+    "Panna Hegedüs",
+    "Tamás Laszlovszky",
+    "László Halász",
+    "Gabriella Miklós",
+    "Bálint Király",
+    "György Perczel",
+    "Virág Bokodi",
+    "László Entz",
+    "István Ulbert",
+    "Gertrúd Tamás",
+    "Dániel Fabó",
+    "Loránd Erőss",
+    "Balázs Hangya"
+  ],
+  "HowToAcknowledge": "Cite the Figshare dataset doi:10.6084/m9.figshare.31359616 and the associated article 'Neurons of the human subthalamic nucleus engage with local delta frequency processes during action cancellation'.",
+  "ReferencesAndLinks": [
+    "https://doi.org/10.6084/m9.figshare.31359616"
+  ],
+  "Keywords": [
+    "subthalamic nucleus",
+    "local field potential",
+    "stop-signal task",
+    "response inhibition",
+    "Parkinson's disease",
+    "deep brain stimulation"
+  ],
+  "SourceDatasets": [
+    {
+      "DOI": "doi:10.6084/m9.figshare.31359616",
+      "URL": "https://figshare.com/articles/dataset/31359616",
+      "Version": "Figshare version 2"
+    }
+  ],
+  "GeneratedBy": [
+    {
+      "Name": "Authors' processing",
+      "Description": "Intraoperative STN microelectrode LFP released as EEGLAB files at 250 Hz, high-pass filtered (0.5 or 2 Hz) and notch-filtered or cleaned."
+    },
+    {
+      "Name": "b3w11_convert_stndelta.py",
+      "Description": "Repackaging of the 0.5 Hz high-pass LFP files to BrainVision float32 µV with unchanged values; annotations to events.tsv; dated folder names dropped. Code in code/."
+    }
+  ]
+}

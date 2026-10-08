@@ -1,0 +1,28 @@
+{
+  "TaskName": "stopsignal",
+  "TaskDescription": "Stop-signal reaction time task performed intraoperatively (record; Szabo et al.)",
+  "SamplingFrequency": 250.0,
+  "PowerLineFrequency": 50,
+  "SoftwareFilters": {
+    "HighPass": {
+      "CutoffHz": 0.5,
+      "Description": "authors' high-pass (file EEG_filtCLN_05HP.set)"
+    },
+    "Cleaning": {
+      "Description": "authors' 'filtnotch' (notch-filtered) or 'filtCLN' (cleaned) processing; this file: filtCLN"
+    },
+    "Resampling": {
+      "Description": "released at 250 Hz"
+    }
+  },
+  "HardwareFilters": "n/a",
+  "iEEGReference": "n/a (not stated in the release)",
+  "Manufacturer": "n/a",
+  "RecordingType": "continuous",
+  "RecordingDuration": 796.412,
+  "DBSChannelCount": 5,
+  "ECOGChannelCount": 0,
+  "SEEGChannelCount": 0,
+  "ElectricalStimulation": false,
+  "ElectricalStimulationParameters": "release folder label 'stimoff' (meaning as in the source; not further described in the record)"
+}
