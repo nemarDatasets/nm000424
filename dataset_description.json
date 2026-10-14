@@ -20,6 +20,9 @@
     "Balázs Hangya"
   ],
   "HowToAcknowledge": "Cite the Figshare dataset doi:10.6084/m9.figshare.31359616 and the associated article 'Neurons of the human subthalamic nucleus engage with local delta frequency processes during action cancellation'.",
+  "EthicsApprovals": [
+    "Informed consent forms and all research protocols were approved by the Institutional Research Ethics Committee of NIMNN or its predecessors (OKITI IKEB1/2018; OMIII IKEB 21/2023) and the National Scientific and Ethical Committee of the Medical Research Council, Budapest, Hungary (OGYÉI/64814-6/2023); informed consent was obtained from all subjects. Source: Szabo et al. 2026, Nat Commun, doi:10.1038/s41467-026-71502-z (Methods, Patient selection), the article of this Figshare dataset."
+  ],
   "ReferencesAndLinks": [
     "https://doi.org/10.6084/m9.figshare.31359616"
   ],
