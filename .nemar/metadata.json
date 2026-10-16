@@ -1,9 +1,9 @@
 {
   "version": "2.0",
   "pipeline_stage": "validated",
-  "title": "Szabo-2026-neurons-10.1038/s41467-026-71502-z",
-  "description": "Intraoperative local field potentials recorded with microelectrodes from the subthalamic nucleus of 13 patients with Parkinson's disease undergoing deep brain stimulation surgery. Patients performed a stop-signal reaction time task during recording. This derivative release provides the authors' filtered 250 Hz continuous LFP (0.5 Hz high-pass version) repackaged in BIDS with event annotations.",
-  "methods_description": "Intraoperative STN microelectrode LFP was recorded during a stop-signal task, released as EEGLAB files at 250 Hz and high-pass filtered at 0.5 or 2 Hz. The 0.5 Hz version was converted to BrainVision float32 µV with unchanged values, and annotations were exported to events.tsv.",
+  "title": "Human STN LFP during a stop-signal task (STN delta)",
+  "description": "Intraoperative local field potential recordings from the subthalamic nucleus of 13 patients with Parkinson's disease undergoing deep brain stimulation surgery. Signals were acquired with microelectrodes while patients performed a stop-signal reaction time task. This derivative release repackages the authors' filtered 250 Hz continuous LFP (0.5 Hz high-pass version) in BIDS format with event annotations.",
+  "methods_description": "Microelectrode LFP was recorded intraoperatively during a stop-signal task, released as 250 Hz EEGLAB files high-pass filtered at 0.5 or 2 Hz and notch-filtered or cleaned. The 0.5 Hz versions were repackaged to BrainVision float32 µV with unchanged values, and EEGLAB annotations were converted to events.tsv.",
   "license": "CC-BY-4.0",
   "dataset_type": "derivative",
   "authors": {
@@ -47,7 +47,12 @@
       "value_uri": "http://id.nlm.nih.gov/mesh/D010300"
     },
     {
-      "term": "deep brain stimulation"
+      "term": "Deep Brain Stimulation",
+      "subject_scheme": "MeSH",
+      "value_uri": "http://id.nlm.nih.gov/mesh/D046690"
+    },
+    {
+      "term": "intracranial recording"
     }
   ],
   "related_identifiers": [
@@ -90,5 +95,5 @@
     ".vmrk",
     ".yml"
   ],
-  "source_hash": "3c1f834e001a53ed5d7eb4ea93f01a1abf55c5db89746913163d950173413d9a"
+  "source_hash": "19242effb22a46709ae09fae377e42cf6531fb1ce4acf9026ec3c6a3272ae800"
 }
