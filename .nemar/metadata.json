@@ -1,9 +1,9 @@
 {
   "version": "2.0",
   "pipeline_stage": "validated",
-  "title": "Human subthalamic nucleus LFP during a stop-signal task (STN delta; Szabo et al.; derivative, 250 Hz)",
-  "description": "Intraoperative local field potential recordings from the subthalamic nucleus of 13 patients with Parkinson's disease undergoing deep brain stimulation surgery while performing a stop-signal reaction time task. This derivative release repackages the authors' filtered 250 Hz continuous LFP (0.5 Hz high-pass version) in BIDS iEEG format with annotations converted to events files. It supports study of delta-frequency activity in the human STN during action cancellation.",
-  "methods_description": "Microelectrode LFP was recorded intraoperatively from the STN during a stop-signal task. The authors' 250 Hz EEGLAB files (high-pass filtered and notch-filtered or cleaned) were converted to BrainVision float32 µV with unchanged values, and EEGLAB annotations were written to events.tsv.",
+  "title": "Szabo-2026-neurons-10.1038/s41467-026-71502-z",
+  "description": "Intraoperative local field potential (LFP) recordings from the subthalamic nucleus of 13 patients with Parkinson's disease undergoing deep brain stimulation surgery. Recordings were made with microelectrodes during a stop-signal reaction time task, which probes action cancellation and response inhibition. This derivative release provides the authors' filtered 250 Hz continuous LFP, repackaged in BIDS with task events.",
+  "methods_description": "Intraoperative microelectrode LFP was recorded from the STN while patients performed a stop-signal task. The authors' EEGLAB files at 250 Hz, high-pass filtered at 0.5 Hz, were converted to BrainVision float32 µV with unchanged values. Annotations were written to events.tsv.",
   "license": "CC-BY-4.0",
   "dataset_type": "derivative",
   "authors": {
@@ -28,9 +28,7 @@
   },
   "keywords": [
     {
-      "term": "Subthalamic Nucleus",
-      "subject_scheme": "MeSH",
-      "value_uri": "http://id.nlm.nih.gov/mesh/D020531"
+      "term": "subthalamic nucleus"
     },
     {
       "term": "local field potential"
@@ -42,15 +40,14 @@
       "term": "response inhibition"
     },
     {
-      "term": "Parkinson's disease"
+      "term": "Parkinson Disease",
+      "subject_scheme": "MeSH",
+      "value_uri": "http://id.nlm.nih.gov/mesh/D010300"
     },
     {
       "term": "Deep Brain Stimulation",
       "subject_scheme": "MeSH",
       "value_uri": "http://id.nlm.nih.gov/mesh/D046690"
-    },
-    {
-      "term": "intracranial EEG"
     }
   ],
   "related_identifiers": [
@@ -93,5 +90,5 @@
     ".vmrk",
     ".yml"
   ],
-  "source_hash": "ff56c159961b35352263b72ef58c3b0331edbc0e049169af84b8a1e0420b2b64"
+  "source_hash": "2d1609d95b6c4b0a0ab60623414ee31ab688e2647e8ff26decd0715c393192f7"
 }
