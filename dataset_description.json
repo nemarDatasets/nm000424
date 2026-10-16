@@ -1,5 +1,5 @@
 {
-  "Name": "Human subthalamic nucleus LFP during a stop-signal task (STN delta; Szabo et al.; derivative, 250 Hz)",
+  "Name": "Szabo-2026-neurons-10.1038/s41467-026-71502-z",
   "BIDSVersion": "1.10.0",
   "DatasetType": "derivative",
   "License": "CC-BY-4.0",
@@ -52,5 +52,5 @@
     }
   ],
   "DatasetDOI": "10.82901/nemar.nm000424",
-  "Version": "1.0.0"
+  "Version": "1.0.1"
 }
