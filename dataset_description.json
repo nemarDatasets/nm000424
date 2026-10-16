@@ -50,5 +50,7 @@
       "Name": "b3w11_convert_stndelta.py",
       "Description": "Repackaging of the 0.5 Hz high-pass LFP files to BrainVision float32 µV with unchanged values; annotations to events.tsv; dated folder names dropped. Code in code/."
     }
-  ]
+  ],
+  "DatasetDOI": "10.82901/nemar.nm000424",
+  "Version": "1.0.0"
 }
