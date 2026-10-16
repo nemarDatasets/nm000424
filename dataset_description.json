@@ -1,5 +1,5 @@
 {
-  "Name": "Szabo-2026-neurons-10.1038/s41467-026-71502-z",
+  "Name": "Human STN LFP during a stop-signal task (STN delta)",
   "BIDSVersion": "1.10.0",
   "DatasetType": "derivative",
   "License": "CC-BY-4.0",
