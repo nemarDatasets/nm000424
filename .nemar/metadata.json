@@ -2,8 +2,8 @@
   "version": "2.0",
   "pipeline_stage": "validated",
   "title": "Human subthalamic nucleus LFP during a stop-signal task (STN delta; Szabo et al.; derivative, 250 Hz)",
-  "description": "Intraoperative local field potentials recorded with microelectrodes from the subthalamic nucleus of 13 patients with Parkinson's disease undergoing deep brain stimulation surgery while they performed a stop-signal reaction time task. This derivative release contains the authors' continuous 250 Hz filtered LFP (0.5 Hz high-pass version), repackaged in BIDS-iEEG with BrainVision files and event annotations. It supports analyses of delta-frequency activity during action cancellation.",
-  "methods_description": "Intraoperative STN microelectrode LFP was recorded during DBS implantation while patients performed a stop-signal task. The authors' EEGLAB files at 250 Hz were high-pass filtered (0.5 or 2 Hz) and notch-filtered or cleaned. The 0.5 Hz versions were repackaged as BrainVision float32 µV with unchanged values, and EEGLAB annotations were converted to events.tsv.",
+  "description": "Intraoperative local field potential recordings from the subthalamic nucleus of 13 patients with Parkinson's disease undergoing deep brain stimulation surgery while performing a stop-signal reaction time task. This derivative release repackages the authors' filtered 250 Hz continuous LFP (0.5 Hz high-pass version) in BIDS iEEG format with annotations converted to events files. It supports study of delta-frequency activity in the human STN during action cancellation.",
+  "methods_description": "Microelectrode LFP was recorded intraoperatively from the STN during a stop-signal task. The authors' 250 Hz EEGLAB files (high-pass filtered and notch-filtered or cleaned) were converted to BrainVision float32 µV with unchanged values, and EEGLAB annotations were written to events.tsv.",
   "license": "CC-BY-4.0",
   "dataset_type": "derivative",
   "authors": {
@@ -42,9 +42,7 @@
       "term": "response inhibition"
     },
     {
-      "term": "Parkinson Disease",
-      "subject_scheme": "MeSH",
-      "value_uri": "http://id.nlm.nih.gov/mesh/D010300"
+      "term": "Parkinson's disease"
     },
     {
       "term": "Deep Brain Stimulation",
@@ -88,11 +86,12 @@
   "formats": [
     ".eeg",
     ".json",
+    ".md",
     ".py",
     ".tsv",
     ".vhdr",
     ".vmrk",
     ".yml"
   ],
-  "source_hash": "653eb08cde1fc4c5b8e31cfca57330b5f99a95d03f761897d3f6e7f7ce98f109"
+  "source_hash": "ff56c159961b35352263b72ef58c3b0331edbc0e049169af84b8a1e0420b2b64"
 }
