@@ -2,8 +2,8 @@
   "version": "2.0",
   "pipeline_stage": "validated",
   "title": "Szabo-2026-neurons-10.1038/s41467-026-71502-z",
-  "description": "Intraoperative local field potential (LFP) recordings from the subthalamic nucleus of 13 patients with Parkinson's disease undergoing deep brain stimulation surgery. Recordings were made with microelectrodes during a stop-signal reaction time task, which probes action cancellation and response inhibition. This derivative release provides the authors' filtered 250 Hz continuous LFP, repackaged in BIDS with task events.",
-  "methods_description": "Intraoperative microelectrode LFP was recorded from the STN while patients performed a stop-signal task. The authors' EEGLAB files at 250 Hz, high-pass filtered at 0.5 Hz, were converted to BrainVision float32 µV with unchanged values. Annotations were written to events.tsv.",
+  "description": "Intraoperative local field potentials recorded with microelectrodes from the subthalamic nucleus of 13 patients with Parkinson's disease undergoing deep brain stimulation surgery. Patients performed a stop-signal reaction time task during recording. This derivative release provides the authors' filtered 250 Hz continuous LFP (0.5 Hz high-pass version) repackaged in BIDS with event annotations.",
+  "methods_description": "Intraoperative STN microelectrode LFP was recorded during a stop-signal task, released as EEGLAB files at 250 Hz and high-pass filtered at 0.5 or 2 Hz. The 0.5 Hz version was converted to BrainVision float32 µV with unchanged values, and annotations were exported to events.tsv.",
   "license": "CC-BY-4.0",
   "dataset_type": "derivative",
   "authors": {
@@ -28,7 +28,9 @@
   },
   "keywords": [
     {
-      "term": "subthalamic nucleus"
+      "term": "Subthalamic Nucleus",
+      "subject_scheme": "MeSH",
+      "value_uri": "http://id.nlm.nih.gov/mesh/D020531"
     },
     {
       "term": "local field potential"
@@ -45,9 +47,7 @@
       "value_uri": "http://id.nlm.nih.gov/mesh/D010300"
     },
     {
-      "term": "Deep Brain Stimulation",
-      "subject_scheme": "MeSH",
-      "value_uri": "http://id.nlm.nih.gov/mesh/D046690"
+      "term": "deep brain stimulation"
     }
   ],
   "related_identifiers": [
@@ -90,5 +90,5 @@
     ".vmrk",
     ".yml"
   ],
-  "source_hash": "2d1609d95b6c4b0a0ab60623414ee31ab688e2647e8ff26decd0715c393192f7"
+  "source_hash": "3c1f834e001a53ed5d7eb4ea93f01a1abf55c5db89746913163d950173413d9a"
 }
