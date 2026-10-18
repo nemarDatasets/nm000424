@@ -1,2 +1,5 @@
+1.0.3 2026-10-19
+  - Units: DBS channels of 24 recordings changed from µV to n/a in channels.tsv and the .vhdr headers: the EEGLAB release states no unit and the values (robust SD 0.003-0.013) are 1000x too small for µV; mV is not established. The 24 .vhdr files are now plain git files (were annexed). Data unchanged. Version 1.0.3: 1.0.2 is used by the unmerged origin/release/v1.0.2 (title change), which this branch (based on main 1.0.1) does not contain.
+
 1.0.0 2026-10-08
   - Repackaging of the STN LFP of Figshare doi:10.6084/m9.figshare.31359616 (derivative) for NEMAR.

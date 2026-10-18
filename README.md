@@ -41,3 +41,9 @@ Methods, Patient selection):
 > Ethical Committee of the Medical Research Council, Budapest, Hungary (OGYÉI/64814-6/2023)."
 
 The 13 patients of the article are the 13 patients of this dataset.
+
+## Units (added 2026-10-19, version 1.0.3)
+
+The DBS channels (microelectrode LFP tracks Ch1-Ch5) now say `n/a` in channels.tsv and in the BrainVision headers (were `µV`). The values are the release's EEGLAB numbers, unchanged. EEGLAB files carry no unit; the conversion had assumed EEGLAB's µV convention, but the stored numbers are far too small for µV: robust SD after a 1 Hz high-pass 0.003-0.013 (median per run, one run per patient, 13 patients, 19 Oct 2026), i.e. 3-13 nV if they were µV. Read as mV they would be 3-13 µV, plausible for a microelectrode LFP, but this is not established: the intraoperative F4 scalp EEG channel recorded by the same ISIS MER system (release files `stimoff_*/EEG_*.set`, not repackaged) reads 0.0006-0.0007 in the same files, which would be an implausible 0.6 µV in mV, while the postoperative 60-channel Brain Products EEG in the release reads 6-11 (plausible µV). The release and the article (Szabo et al. 2026, Nat Commun, Methods) state no unit. So no unit is assigned.
+
+Reading with MNE: a channel with unit `n/a` is read as volts with scale 1, so `raw.get_data()` returns the release numbers unchanged (before this change MNE multiplied them by 1e-6). Treat them as numbers in an unknown unit; relative measures (spectra shape, phase, event-related changes) are unaffected. Evidence files: fix1019 `out/pubamp/` (Voyager Jobs ieeg-f19-pa-*, 19 Oct 2026).

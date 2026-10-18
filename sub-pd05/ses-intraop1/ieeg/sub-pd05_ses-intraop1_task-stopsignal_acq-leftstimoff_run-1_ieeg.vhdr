@@ -1,1 +1,21 @@
-/annex/objects/SHA256E-s574--b3aacb053a2c5342de12338d0a5247958fb94449405bd33796a32ab34a37367f.vhdr
+Brain Vision Data Exchange Header File Version 1.0
+; b3w11_convert_stndelta.py: EEGLAB EEG_filtCLN_05HP.set (filtCLN) values unchanged as float32 µV
+
+[Common Infos]
+Codepage=UTF-8
+DataFile=sub-pd05_ses-intraop1_task-stopsignal_acq-leftstimoff_run-1_ieeg.eeg
+MarkerFile=sub-pd05_ses-intraop1_task-stopsignal_acq-leftstimoff_run-1_ieeg.vmrk
+DataFormat=BINARY
+DataOrientation=MULTIPLEXED
+NumberOfChannels=5
+SamplingInterval=4000.0
+
+[Binary Infos]
+BinaryFormat=IEEE_FLOAT_32
+
+[Channel Infos]
+Ch1=Ch1,,1.0,n/a
+Ch2=Ch2,,1.0,n/a
+Ch3=Ch3,,1.0,n/a
+Ch4=Ch4,,1.0,n/a
+Ch5=Ch5,,1.0,n/a
