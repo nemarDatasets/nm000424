@@ -65,7 +65,7 @@ for f in files:
          [[round(float(a["onset"]), 6), round(float(a["duration"]), 6), a["description"], int(round(float(a["onset"]) * fs))] for a in ann])
     hp = "0.5" if "05HP" in f else "2"
     wtsv(os.path.join(D, stem + "_channels.tsv"), ["name", "type", "units", "low_cutoff", "high_cutoff", "sampling_frequency", "group", "status", "status_description", "description"],
-         [[c, "DBS", "µV", hp, "n/a", fs, side, "good", "n/a", "intraoperative STN microelectrode LFP, track %s of the %s hemisphere (release channel name)" % (c, side)] for c in names])
+         [[c, "DBS", "n/a", hp, "n/a", fs, side, "good", "n/a", "intraoperative STN microelectrode LFP, track %s of the %s hemisphere (release channel name)" % (c, side)] for c in names])
     wjson(os.path.join(D, stem + "_ieeg.json"), {
         "TaskName": "stopsignal",
         "TaskDescription": "Stop-signal reaction time task performed intraoperatively (record; Szabo et al.)",
@@ -139,7 +139,9 @@ files. Each recording exists in a 0.5 Hz and a 2 Hz high-pass version; only the 
 - {len(subs)} patients (`sub-pd<NN>` = release patient id), {len(rep['recordings'])} recordings, {hrs:.2f} h at 250 Hz.
 - `ses-intraop<k>`: intraoperative session k of that patient (ordered by date; dates removed).
 - `acq-<side>stim<off|on>`: hemisphere and the release's stimulation label (folder `stim<off|on>_<side>_LFP`).
-- Channels Ch1..Ch5: the release's microelectrode tracks (type DBS, µV, values unchanged as float32).
+- Channels Ch1..Ch5: the release's microelectrode tracks (type DBS, values unchanged as float32). Units are `n/a`: the values
+  are Inomed ISIS ADC steps of 0.4/65535 (the release's 20 kHz MER data, e.g. pd03 `Ch1_data.mat`, equal the LFP before
+  resampling), which the authors' spike code treats as volts (`read_inomed.m`); the amplifier gain is not released.
 - `events.tsv`: the EEGLAB annotations (StimulusOn, KeyPress1, Feedback, StopSignal, ...).
 - No coordinates are released; electrodes.tsv lists the tracks with x, y, z = n/a and the stated target (STN).
 
