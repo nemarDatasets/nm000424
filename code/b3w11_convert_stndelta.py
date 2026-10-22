@@ -42,7 +42,7 @@ for f in files:
     variant = os.path.basename(f).split("_")[1]  # filtnotch / filtCLN
     stim, side = m.group(1), m.group(2)
     raw = mne.io.read_raw_eeglab(f, preload=True)
-    X_ = raw.get_data() * 1e6  # MNE reads EEGLAB data as µV -> V; back to the file's µV
+    X_ = raw.get_data() * 1e6  # undo MNE's 1e-6 EEGLAB scaling: values as stored in the file
     fs = raw.info["sfreq"]
     sub = "sub-" + pt
     ses = f"ses-intraop{SES[pt][sd[:6]]}"
@@ -54,8 +54,8 @@ for f in files:
     X32 = np.ascontiguousarray(X_.T.astype("<f4"))
     X32.tofile(os.path.join(D, stem + "_ieeg.eeg"))
     names = raw.ch_names
-    write_vhdr(os.path.join(D, stem + "_ieeg"), len(names), fs, names, ["µV"] * len(names),
-               comment="b3w11_convert_stndelta.py: EEGLAB %s (%s) values unchanged as float32 µV" % (os.path.basename(f), variant))
+    write_vhdr(os.path.join(D, stem + "_ieeg"), len(names), fs, names, ["n/a"] * len(names),
+               comment="b3w11_convert_stndelta.py: EEGLAB %s (%s) values unchanged as float32 (unit not stated in the release)" % (os.path.basename(f), variant))
     back = np.fromfile(os.path.join(D, stem + "_ieeg.eeg"), dtype="<f4").reshape(-1, len(names)).T.astype(np.float64)
     err = float(np.max(np.abs(back - X_))) if X_.size else 0.0
     scale = float(np.max(np.abs(X_))) or 1.0
@@ -140,8 +140,7 @@ files. Each recording exists in a 0.5 Hz and a 2 Hz high-pass version; only the 
 - `ses-intraop<k>`: intraoperative session k of that patient (ordered by date; dates removed).
 - `acq-<side>stim<off|on>`: hemisphere and the release's stimulation label (folder `stim<off|on>_<side>_LFP`).
 - Channels Ch1..Ch5: the release's microelectrode tracks (type DBS, values unchanged as float32). Units are `n/a`: the
-  release does not document the physical units of these values (the µV label in the BrainVision headers is from the
-  repackaging, not from the release).
+  release does not document the physical units of these values.
 - `events.tsv`: the EEGLAB annotations (StimulusOn, KeyPress1, Feedback, StopSignal, ...).
 - No coordinates are released; electrodes.tsv lists the tracks with x, y, z = n/a and the stated target (STN).
 

@@ -1,5 +1,6 @@
 1.0.3 2026-10-21
-  - channels.tsv units µV -> n/a: the release does not document the physical units; README note.
+  - channels.tsv units µV -> n/a: the release does not document the physical units; the converter writes n/a in the
+    BrainVision headers too; README note.
 
 1.0.0 2026-10-08
   - Repackaging of the STN LFP of Figshare doi:10.6084/m9.figshare.31359616 (derivative) for NEMAR.

@@ -22,8 +22,8 @@ files. Each recording exists in a 0.5 Hz and a 2 Hz high-pass version; only the 
 - `ses-intraop<k>`: intraoperative session k of that patient (ordered by date; dates removed).
 - `acq-<side>stim<off|on>`: hemisphere and the release's stimulation label (folder `stim<off|on>_<side>_LFP`).
 - Channels Ch1..Ch5: the release's microelectrode tracks (type DBS, values unchanged as float32). Units are `n/a`: the
-  release does not document the physical units of these values (the µV label in the BrainVision headers is from the
-  repackaging, not from the release).
+  release does not document the physical units of these values. The µV in the current BrainVision headers is a
+  repackaging label, not a documented unit; the converter in code/ writes `n/a` there.
 - `events.tsv`: the EEGLAB annotations (StimulusOn, KeyPress1, Feedback, StopSignal, ...).
 - No coordinates are released; electrodes.tsv lists the tracks with x, y, z = n/a and the stated target (STN).
 
