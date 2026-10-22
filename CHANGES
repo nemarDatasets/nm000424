@@ -1,5 +1,5 @@
 1.0.3 2026-10-21
-  - channels.tsv units µV -> n/a: values are Inomed ISIS ADC steps (0.4/65535), amplifier gain not released; README note.
+  - channels.tsv units µV -> n/a: the release does not document the physical units; README note.
 
 1.0.0 2026-10-08
   - Repackaging of the STN LFP of Figshare doi:10.6084/m9.figshare.31359616 (derivative) for NEMAR.

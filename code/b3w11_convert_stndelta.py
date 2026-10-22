@@ -116,7 +116,7 @@ wjson(os.path.join(OUT, "dataset_description.json"), {
     "Keywords": ["subthalamic nucleus", "local field potential", "stop-signal task", "response inhibition", "Parkinson's disease", "deep brain stimulation"],
     "SourceDatasets": [{"DOI": "doi:10.6084/m9.figshare.31359616", "URL": "https://figshare.com/articles/dataset/31359616", "Version": "Figshare version %s" % rec.get("version")}],
     "GeneratedBy": [{"Name": "Authors' processing", "Description": "Intraoperative STN microelectrode LFP released as EEGLAB files at 250 Hz, high-pass filtered (0.5 or 2 Hz) and notch-filtered or cleaned."},
-                    {"Name": "b3w11_convert_stndelta.py", "Description": "Repackaging of the 0.5 Hz high-pass LFP files to BrainVision float32 µV with unchanged values; annotations to events.tsv; dated folder names dropped. Code in code/."}],
+                    {"Name": "b3w11_convert_stndelta.py", "Description": "Repackaging of the 0.5 Hz high-pass LFP files to BrainVision float32 with unchanged values; annotations to events.tsv; dated folder names dropped. Code in code/."}],
 })
 open(os.path.join(OUT, "README"), "w").write(f"""# Human STN LFP during a stop-signal task (STN delta) - DERIVATIVE
 
@@ -139,9 +139,9 @@ files. Each recording exists in a 0.5 Hz and a 2 Hz high-pass version; only the 
 - {len(subs)} patients (`sub-pd<NN>` = release patient id), {len(rep['recordings'])} recordings, {hrs:.2f} h at 250 Hz.
 - `ses-intraop<k>`: intraoperative session k of that patient (ordered by date; dates removed).
 - `acq-<side>stim<off|on>`: hemisphere and the release's stimulation label (folder `stim<off|on>_<side>_LFP`).
-- Channels Ch1..Ch5: the release's microelectrode tracks (type DBS, values unchanged as float32). Units are `n/a`: the values
-  are Inomed ISIS ADC steps of 0.4/65535 (the release's 20 kHz MER data, e.g. pd03 `Ch1_data.mat`, equal the LFP before
-  resampling), which the authors' spike code treats as volts (`read_inomed.m`); the amplifier gain is not released.
+- Channels Ch1..Ch5: the release's microelectrode tracks (type DBS, values unchanged as float32). Units are `n/a`: the
+  release does not document the physical units of these values (the µV label in the BrainVision headers is from the
+  repackaging, not from the release).
 - `events.tsv`: the EEGLAB annotations (StimulusOn, KeyPress1, Feedback, StopSignal, ...).
 - No coordinates are released; electrodes.tsv lists the tracks with x, y, z = n/a and the stated target (STN).
 
