@@ -21,11 +21,15 @@ files. Each recording exists in a 0.5 Hz and a 2 Hz high-pass version; only the 
 - 13 patients (`sub-pd<NN>` = release patient id), 24 recordings, 5.13 h at 250 Hz.
 - `ses-intraop<k>`: intraoperative session k of that patient (ordered by date; dates removed).
 - `acq-<side>stim<off|on>`: hemisphere and the release's stimulation label (folder `stim<off|on>_<side>_LFP`).
-- Channels Ch1..Ch5: the release's microelectrode tracks (type DBS, values unchanged as float32). Units are `n/a` in
-  channels.tsv and in the BrainVision headers: the release does not document the physical units of these values. The
-  headers are plain text files in git since version 1.0.3 (the annexed ones said µV); the `.eeg` files are unchanged.
+- Channels Ch1..Ch5: the release's microelectrode tracks (type DBS, µV, values unchanged as float32).
 - `events.tsv`: the EEGLAB annotations (StimulusOn, KeyPress1, Feedback, StopSignal, ...).
 - No coordinates are released; electrodes.tsv lists the tracks with x, y, z = n/a and the stated target (STN).
+
+## Units (version 1.0.3)
+The DBS channels Ch1..Ch5 have units `n/a` in channels.tsv and in the BrainVision headers, not the µV of the Contents
+list above: the release does not document the physical units of these values, and the converter in code/ writes `n/a`.
+The headers are plain text files in git since version 1.0.3 (the annexed ones said µV); the `.eeg` files are unchanged.
+Receipts: `code/receipts/2026-10-22_units_undocumented.md`, `code/receipts/2026-10-30_vhdr-plain-git.md`.
 
 ## Privacy
 Recording dates (in the release folder names) are dropped. No names were found.
