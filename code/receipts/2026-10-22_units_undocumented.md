@@ -56,7 +56,8 @@
 | sub-pd16_ses-intraop1_task-stopsignal_acq-leftstimoff_run-1 | 5 | µV -> n/a | True | µV | 0 |
 | sub-pd16_ses-intraop1_task-stopsignal_acq-rightstimoff_run-1 | 4 | µV -> n/a | True | µV | 0 |
 
-All 109 rows change µV -> n/a with the other columns unchanged; the current headers keep the µV label written by the
-repackaging (the converter in `code/` writes `n/a`); no unit field or text in the source files.
+All 109 rows change µV -> n/a with the other columns unchanged; the annexed headers at `origin/main` keep the µV label
+written by the repackaging, and the PR replaces them with plain-git headers that say `n/a`, as the converter in `code/`
+writes (`2026-10-30_vhdr-plain-git.md`); no unit field or text in the source files.
 
 **Coverage**: 24 of 24 channels.tsv, 24 of 24 headers, 24 of 24 converted source files.
